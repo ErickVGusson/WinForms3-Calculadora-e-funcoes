@@ -44,7 +44,7 @@
             this.txbNumero1.Location = new System.Drawing.Point(31, 98);
             this.txbNumero1.Name = "txbNumero1";
             this.txbNumero1.Size = new System.Drawing.Size(68, 23);
-            this.txbNumero1.TabIndex = 4;
+            this.txbNumero1.TabIndex = 0;
             // 
             // txbNumero2
             // 
@@ -52,7 +52,7 @@
             this.txbNumero2.Location = new System.Drawing.Point(105, 98);
             this.txbNumero2.Name = "txbNumero2";
             this.txbNumero2.Size = new System.Drawing.Size(68, 23);
-            this.txbNumero2.TabIndex = 5;
+            this.txbNumero2.TabIndex = 1;
             // 
             // btnMais
             // 
@@ -60,10 +60,10 @@
             this.btnMais.Location = new System.Drawing.Point(31, 124);
             this.btnMais.Name = "btnMais";
             this.btnMais.Size = new System.Drawing.Size(68, 61);
-            this.btnMais.TabIndex = 6;
+            this.btnMais.TabIndex = 2;
             this.btnMais.Text = "+";
             this.btnMais.UseVisualStyleBackColor = true;
-            this.btnMais.Click += new System.EventHandler(this.btnMais_Click);
+            this.btnMais.Click += new System.EventHandler(this.btnCalcular);
             // 
             // btnMenos
             // 
@@ -71,10 +71,10 @@
             this.btnMenos.Location = new System.Drawing.Point(105, 124);
             this.btnMenos.Name = "btnMenos";
             this.btnMenos.Size = new System.Drawing.Size(68, 61);
-            this.btnMenos.TabIndex = 7;
+            this.btnMenos.TabIndex = 3;
             this.btnMenos.Text = "-";
             this.btnMenos.UseVisualStyleBackColor = true;
-            this.btnMenos.Click += new System.EventHandler(this.btnMenos_Click);
+            this.btnMenos.Click += new System.EventHandler(this.btnCalcular);
             // 
             // btnDividir
             // 
@@ -82,10 +82,10 @@
             this.btnDividir.Location = new System.Drawing.Point(105, 191);
             this.btnDividir.Name = "btnDividir";
             this.btnDividir.Size = new System.Drawing.Size(68, 61);
-            this.btnDividir.TabIndex = 8;
+            this.btnDividir.TabIndex = 5;
             this.btnDividir.Text = "/";
             this.btnDividir.UseVisualStyleBackColor = true;
-            this.btnDividir.Click += new System.EventHandler(this.btnDividir_Click);
+            this.btnDividir.Click += new System.EventHandler(this.btnCalcular);
             // 
             // btnVezes
             // 
@@ -93,10 +93,10 @@
             this.btnVezes.Location = new System.Drawing.Point(31, 191);
             this.btnVezes.Name = "btnVezes";
             this.btnVezes.Size = new System.Drawing.Size(68, 61);
-            this.btnVezes.TabIndex = 9;
+            this.btnVezes.TabIndex = 4;
             this.btnVezes.Text = "X";
             this.btnVezes.UseVisualStyleBackColor = true;
-            this.btnVezes.Click += new System.EventHandler(this.btnVezes_Click);
+            this.btnVezes.Click += new System.EventHandler(this.btnCalcular);
             // 
             // lblResultado
             // 
@@ -121,7 +121,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(296, 395);
+            this.BackColor = System.Drawing.SystemColors.Window;
+            this.ClientSize = new System.Drawing.Size(203, 404);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblResultado);
             this.Controls.Add(this.btnVezes);
