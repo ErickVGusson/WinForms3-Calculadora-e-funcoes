@@ -117,7 +117,7 @@ namespace WindowsFormsApp3
 
             Button botao = (Button)sender;
             string operadorSelecionado = botao.Text;
-            MessageBox.Show(operadorSelecionado);
+            //MessageBox.Show(operadorSelecionado);
 
             double total;
 
@@ -127,61 +127,62 @@ namespace WindowsFormsApp3
 
         }
 
-        private void btnMais_Click(object sender, EventArgs e)
-        {
+        //Funções de click para cada botão
+        //private void btnMais_Click(object sender, EventArgs e)
+        //{
 
-            double numero1 = double.Parse( txbNumero1.Text );
-            double numero2 = double.Parse( txbNumero2.Text );
+        //    double numero1 = double.Parse(txbNumero1.Text);
+        //    double numero2 = double.Parse(txbNumero2.Text);
 
-            double total;
+        //    double total;
 
-            total = calculos( numero1, numero2, "+" );
+        //    total = calculos(numero1, numero2, "+");
 
-            lblResultado.Text = total.ToString();
+        //    lblResultado.Text = total.ToString();
 
-        }
+        //}
 
-        private void btnMenos_Click(object sender, EventArgs e)
-        {
+        //private void btnMenos_Click(object sender, EventArgs e)
+        //{
 
-            double numero1 = double.Parse( txbNumero1.Text );
-            double numero2 = double.Parse( txbNumero2.Text );
+        //    double numero1 = double.Parse(txbNumero1.Text);
+        //    double numero2 = double.Parse(txbNumero2.Text);
 
-            double total;
+        //    double total;
 
-            total = calculos(numero1, numero2, "-");
+        //    total = calculos(numero1, numero2, "-");
 
-            lblResultado.Text = total.ToString();
+        //    lblResultado.Text = total.ToString();
 
-        }
+        //}
 
-        private void btnVezes_Click(object sender, EventArgs e)
-        {
+        //private void btnVezes_Click(object sender, EventArgs e)
+        //{
 
-            double numero1 = double.Parse( txbNumero1.Text );
-            double numero2 = double.Parse( txbNumero2.Text );
+        //    double numero1 = double.Parse(txbNumero1.Text);
+        //    double numero2 = double.Parse(txbNumero2.Text);
 
-            double total;
+        //    double total;
 
-            total = calculos(numero1, numero2, "*");
+        //    total = calculos(numero1, numero2, "*");
 
-            lblResultado.Text = total.ToString();
+        //    lblResultado.Text = total.ToString();
 
-        }
+        //}
 
-        private void btnDividir_Click(object sender, EventArgs e)
-        {
+        //private void btnDividir_Click(object sender, EventArgs e)
+        //{
 
-            double numero1 = double.Parse( txbNumero1.Text );
-            double numero2 = double.Parse( txbNumero2.Text );
+        //    double numero1 = double.Parse( txbNumero1.Text );
+        //    double numero2 = double.Parse( txbNumero2.Text );
 
-            double total;
+        //    double total;
 
-            total = calculos(numero1, numero2, "/");
+        //    total = calculos(numero1, numero2, "/");
 
-            lblResultado.Text = total.ToString();
+        //    lblResultado.Text = total.ToString();
 
-        }
+        //}
 
     }
 }
