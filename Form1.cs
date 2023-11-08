@@ -17,6 +17,16 @@ namespace WindowsFormsApp3
             InitializeComponent();
         }
 
+        public void escolhaOperador(double numero, string operadorEscolhido)
+        {
+
+            lblTemporario.Text = numero.ToString();
+            lblOperador.Text = operadorEscolhido;
+
+            txbNumero1.Text = "";
+
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -67,36 +77,36 @@ namespace WindowsFormsApp3
 
         //}
 
-        public double calculos( double num1, double num2, string operador )
+        public double calculos(double num1, double num2, string operador)
         {
 
             double resultado = 0;
 
-            if ( operador == "+" ) 
+            if (operador == "+")
             {
 
                 resultado = num1 + num2;
-                
+
             }
 
-            else if ( operador == "-" ) 
-            { 
+            else if (operador == "-")
+            {
 
                 resultado = num1 - num2;
 
             }
 
-            else if ( operador == "X" ) 
+            else if (operador == "x")
             {
 
                 resultado = num1 * num2;
 
             }
 
-            else if ( operador == "/" ) 
+            else if (operador == "/")
             {
 
-                resultado = num1 / num2; 
+                resultado = num1 / num2;
 
             }
 
@@ -109,23 +119,58 @@ namespace WindowsFormsApp3
 
         }
 
-        private void btnCalcular( object sender, EventArgs e )
+        private void btnCalcular(object sender, EventArgs e)
         {
+            if (txbNumero1.Text != "")
+            {
 
-            double numero1 = double.Parse(txbNumero1.Text);
-            double numero2 = double.Parse(txbNumero2.Text);
+                double numero1 = double.Parse(txbNumero1.Text);
+                //double numero2 = double.Parse(txbNumero2.Text);
+                //double numero2 = 0;
 
-            Button botao = (Button)sender;
-            string operadorSelecionado = botao.Text;
-            //MessageBox.Show(operadorSelecionado);
+                Button botao = (Button)sender;
+                string operadorSelecionado = botao.Text;
 
-            double total;
+                //double total;
 
-            total = calculos(numero1, numero2, operadorSelecionado);
+                //total = calculos(numero1, numero2, operadorSelecionado);
 
-            lblResultado.Text = total.ToString();
+                //txbResultado.Text = total.ToString();
+
+                escolhaOperador(numero1, operadorSelecionado);
+
+            }
+
+            else
+            {
+
+                lblTemporario.Text = "🚫";
+
+            }
 
         }
+
+        private void btn0_Click(object sender, EventArgs e)
+        {
+
+            Button valorBotao = (Button)sender;
+
+            //MessageBox.Show(valorBotao.Text);
+
+            //txbNumero1.Text = txbNumero1.Text + valorBotao.Text;
+
+            txbNumero1.Text += valorBotao.Text;
+
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+
+            txbNumero1.Text = "";
+
+        }
+
+
 
         //Funções de click para cada botão
         //private void btnMais_Click(object sender, EventArgs e)
