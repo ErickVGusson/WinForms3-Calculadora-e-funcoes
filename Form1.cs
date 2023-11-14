@@ -144,7 +144,7 @@ namespace WindowsFormsApp3
             else
             {
 
-                lblTemporario.Text = "🚫";
+                lblTemporario.Text = "Erro";
 
             }
 
