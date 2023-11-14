@@ -110,6 +110,20 @@ namespace WindowsFormsApp3
 
             }
 
+            else if (operador == "%")
+            {
+
+                resultado = (num2 * num1) / 100;
+
+            }
+
+            else if (operador == "Resto")
+            {
+
+                resultado = num1 % num2;
+
+            }
+
             else
             {
                 resultado = 0;
@@ -166,7 +180,50 @@ namespace WindowsFormsApp3
         private void btnLimpar_Click(object sender, EventArgs e)
         {
 
-            txbNumero1.Text = "";
+            Button botao = (Button)sender;
+            string limparTipo = botao.Text;
+
+            if (limparTipo == "C")
+            {
+
+                txbNumero1.Text = "";
+
+            }
+
+            else
+            {
+
+                txbNumero1.Text = "";
+                lblTemporario.Text = "";
+                lblOperador.Text = "";
+
+            }
+
+        }
+
+        private void btnIgual_Click(object sender, EventArgs e)
+        {
+
+            double primeiro_numero = double.Parse(lblTemporario.Text);
+            double segundo_numero = double.Parse(txbNumero1.Text);
+            string operador = lblOperador.Text;
+
+            //MessageBox.Show("N1: " + primeiro_numero +"\nOP: " + operador + "\nN2: " + segundo_numero);
+
+            double total = calculos(primeiro_numero, segundo_numero, operador);
+
+            lblTemporario.Text = total.ToString();
+
+        }
+
+        private void btnInverso_Click(object sender, EventArgs e)
+        {
+
+            double inverter = double.Parse(txbNumero1.Text);
+
+            inverter = inverter * (-1);
+
+            txbNumero1.Text = inverter.ToString();
 
         }
 
